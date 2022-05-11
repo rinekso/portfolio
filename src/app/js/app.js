@@ -243,16 +243,17 @@
       UIkit.modal($el).show();
 
       //show loading first
-      $wrap.html(
-        '<div class="uk-position-center  uk-text-center">' +
-          "<div data-uk-spinner></div> " +
-        "</div>"
-      ); 
-      
-      $.post($this.attr("href"), function(data) {
-        $wrap.html(data); 
-        $wrap.removeClass('uk-animation-toggle');
-      });
+      // $wrap.html(
+      //   '<div class="uk-position-center  uk-text-center">' +
+      //     "<div data-uk-spinner></div> " +
+      //   "</div>"
+      // ); 
+      $wrap.html($this.attr("data-html")); 
+      $wrap.removeClass('uk-animation-toggle');
+      // $.post($this.attr("href"), function(data) {
+      //   $wrap.html(data); 
+      //   $wrap.removeClass('uk-animation-toggle');
+      // });
       return false;
     });
   }
