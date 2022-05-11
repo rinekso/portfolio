@@ -249,7 +249,7 @@
         "</div>"
       ); 
       
-      $.post("https://rinekso.github.io/portfolio/"+$this.attr("href"), function(data) {
+      $.post($this.attr("href"), function(data) {
         $wrap.html(data); 
         $wrap.removeClass('uk-animation-toggle');
       });
